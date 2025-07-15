@@ -1,0 +1,50 @@
+16:31:13 **** Incremental Build of configuration Debug for project OV ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:31:14 **** Incremental Build of configuration Debug for project OV ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:32:54 **** Incremental Build of configuration Debug for project OV ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:34:54 **** Incremental Build of configuration Debug for project OV ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:36:01 **** Incremental Build of configuration Debug for project OV ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:03:09 **** Incremental Build of configuration Debug for project OV ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:04:50 **** Incremental Build of configuration Debug for project OV ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:05:31 **** Incremental Build of configuration Debug for project OV ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:06:52 **** Incremental Build of configuration Debug for project OV ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:09:00 **** Incremental Build of configuration Debug for project OV ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

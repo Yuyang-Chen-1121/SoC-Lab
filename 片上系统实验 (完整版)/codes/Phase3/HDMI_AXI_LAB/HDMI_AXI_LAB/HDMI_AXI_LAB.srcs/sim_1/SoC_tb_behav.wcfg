@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SoC_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="SoC_tb" />
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="std" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="102300000001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="238"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/SoC_tb/hdmi_clk" type="logic">
+      <obj_property name="ElementShortName">hdmi_clk</obj_property>
+      <obj_property name="ObjectShortName">hdmi_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/hdmi_d" type="array">
+      <obj_property name="ElementShortName">hdmi_d[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hdmi_d[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/hdmi_de" type="logic">
+      <obj_property name="ElementShortName">hdmi_de</obj_property>
+      <obj_property name="ObjectShortName">hdmi_de</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/hdmi_hsync" type="logic">
+      <obj_property name="ElementShortName">hdmi_hsync</obj_property>
+      <obj_property name="ObjectShortName">hdmi_hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/hdmi_scl" type="logic">
+      <obj_property name="ElementShortName">hdmi_scl</obj_property>
+      <obj_property name="ObjectShortName">hdmi_scl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/hdmi_sda" type="logic">
+      <obj_property name="ElementShortName">hdmi_sda</obj_property>
+      <obj_property name="ObjectShortName">hdmi_sda</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/hdmi_vsync" type="logic">
+      <obj_property name="ElementShortName">hdmi_vsync</obj_property>
+      <obj_property name="ObjectShortName">hdmi_vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/clk_in" type="logic">
+      <obj_property name="ElementShortName">clk_in</obj_property>
+      <obj_property name="ObjectShortName">clk_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/i2c_scl" type="logic">
+      <obj_property name="ElementShortName">i2c_scl</obj_property>
+      <obj_property name="ObjectShortName">i2c_scl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/i2c_sda" type="logic">
+      <obj_property name="ElementShortName">i2c_sda</obj_property>
+      <obj_property name="ObjectShortName">i2c_sda</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/bit_counter" type="array">
+      <obj_property name="ElementShortName">bit_counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_counter[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/word_counter" type="array">
+      <obj_property name="ElementShortName">word_counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">word_counter[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/cmd_counter" type="array">
+      <obj_property name="ElementShortName">cmd_counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cmd_counter[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/i2c_init_finish" type="logic">
+      <obj_property name="ElementShortName">i2c_init_finish</obj_property>
+      <obj_property name="ObjectShortName">i2c_init_finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/i2c_cmd" type="array">
+      <obj_property name="ElementShortName">i2c_cmd[30:0]</obj_property>
+      <obj_property name="ObjectShortName">i2c_cmd[30:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/I2C_CMD_PAIRS" type="array">
+      <obj_property name="ElementShortName">I2C_CMD_PAIRS[0:39][15:0]</obj_property>
+      <obj_property name="ObjectShortName">I2C_CMD_PAIRS[0:39][15:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/I2C_HDMI_ADDR" type="array">
+      <obj_property name="ElementShortName">I2C_HDMI_ADDR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">I2C_HDMI_ADDR[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/I2C_HUB_ADDR" type="array">
+      <obj_property name="ElementShortName">I2C_HUB_ADDR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">I2C_HUB_ADDR[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/I2C_CMD_NUM" type="array">
+      <obj_property name="ElementShortName">I2C_CMD_NUM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">I2C_CMD_NUM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoC_tb/DUT/HDMI_AXI_LITE_i/HDMI_AXI_LITE_0/inst/HDMI_AXI_LITE_v1_0_S00_AXI_inst/zedboard_hdmi/u_i2c_sender/I2C_CMD_LENGTH" type="array">
+      <obj_property name="ElementShortName">I2C_CMD_LENGTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">I2C_CMD_LENGTH[31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,125 @@
+void load_sd_bmp()
+{
+    FIL fil;
+    u8 bmp_head[54];
+    UINT br;
+    DIR dir;
+    FILINFO fno;
+    int toggle=0;
+    FRESULT res;
+
+    // Mount the file system and check return value
+    res = f_mount(&fs, "", 0);
+    if (res != FR_OK) {
+        xil_printf("Error: Failed to mount file system, error code: %d\n\r", res);
+        return;
+    } else {
+        xil_printf("File system mounted successfully (path: '')\n\r");
+    }
+
+    // Try opening root directory (with logical drive number 0:/)
+    res = f_opendir(&dir, "0:/");
+    if (res == FR_OK) {
+        xil_printf("Root directory 0:/ opened successfully, scanning contents:\n\r");
+        while (f_readdir(&dir, &fno) == FR_OK && fno.fname[0]) {
+            xil_printf("file/folder: %s\n\r", fno.fname);
+        }
+        f_closedir(&dir);
+    } else {
+        xil_printf("Error: Unable to open root directory 0:/, error code: %d\n\r", res);
+    }
+
+    // Try opening BMP file
+    res = f_open(&fil, "airbus_1.bmp", FA_READ);
+    if (res != FR_OK) {
+        xil_printf("Error: Failed to open airbus_1.bmp, error code: %d\n\r", res);
+        xil_printf("Trying to open 0:/airbus_1.bmp\n\r");
+        res = f_open(&fil, "0:/airbus_1.bmp", FA_READ);
+        if (res != FR_OK) {
+            xil_printf("Error: Failed to open 0:/airbus_1.bmp, error code: %d\n\r", res);
+        }
+    }
+
+    // Move file pointer to beginning
+    res = f_lseek(&fil, 0);
+    if (res != FR_OK) {
+        xil_printf("Error: Failed to seek to start of file, error code: %d\n\r", res);
+        f_close(&fil);
+        f_mount(NULL, "", 0);
+        return;
+    }
+
+    // Read BMP file header
+    res = f_read(&fil, bmp_head, 54, &br);
+    if (res != FR_OK || br != 54) {
+        xil_printf("Error: Failed to read BMP header, error code: %d, bytes read: %d\n\r", res, br);
+        f_close(&fil);
+        f_mount(NULL, "", 0);
+        return;
+    }
+
+    // Validate BMP file header
+    if (bmp_head[0] != 'B' || bmp_head[1] != 'M') {
+        xil_printf("Error: Invalid BMP file format\n\r");
+        f_close(&fil);
+        f_mount(NULL, "", 0);
+        return;
+    }
+
+    // Check bit depth (should be 32-bit)
+    u16 bit_depth = *(u16 *)(bmp_head + 0x1C);
+    if (bit_depth != 32) {
+        xil_printf("Error: BMP bit depth is %d, expected 32\n\r", bit_depth);
+        f_close(&fil);
+        f_mount(NULL, "", 0);
+        return;
+    }
+
+    // Extract width, height, and size
+    UINT bmp_width = *(UINT *)(bmp_head + 0x12);
+    UINT bmp_height = *(UINT *)(bmp_head + 0x16);
+    UINT bmp_size = *(UINT *)(bmp_head + 0x22);
+
+    // Validate dimensions
+    if (bmp_width == 0 || bmp_height == 0 || bmp_size == 0) {
+        xil_printf("Error: Invalid BMP dimensions or size (width=%d, height=%d, size=%d)\n\r",
+                   bmp_width, bmp_height, bmp_size);
+        f_close(&fil);
+        f_mount(NULL, "", 0);
+        return;
+    }
+
+    xil_printf("BMP Info: width=%d, height=%d, size=%d bytes, bit depth=%d\n\r",
+               bmp_width, bmp_height, bmp_size, bit_depth);
+    u32 BMP_DATA[5];
+
+    // Read image data into frame buffer
+    int buff=0;
+    for (int i = bmp_height - 1; i >= 0; i--) {
+        for(int j = bmp_width-1; j >= 0; j--){
+            res = f_read(&fil, BMP_DATA , 3, &br);
+            int Y0 = 0.257*BMP_DATA[0] + 0.504*BMP_DATA[1] + 0.098*BMP_DATA[2] + 16;
+            int U0 = -0.148*BMP_DATA[0] - 0.291*BMP_DATA[1] + 0.439*BMP_DATA[2] + 128;
+            int V0 = 0.439*BMP_DATA[0] - 0.386*BMP_DATA[1] - 0.071*BMP_DATA[2] + 128;
+            Y0 = Y0 < 0 ? 0 : (Y0 > 255 ? 255 : Y0);
+            U0 = U0 < 0 ? 0 : (U0 > 255 ? 255 : U0);
+            V0 = V0 < 0 ? 0 : (V0 > 255 ? 255 : V0);
+            if(!toggle){
+                buff = Y0 << 8 | U0;
+                xil_printf("%x\r\n", buff);
+            }
+            else {
+                buff = Y0 << 8 | V0;
+                xil_printf("%x\r\n", buff);
+            }
+        }
+    }
+
+    // Close file and unmount file system
+    f_close(&fil);
+    f_mount(NULL, "", 0);
+
+    // Flush cache
+    Xil_DCacheFlush();
+    xil_printf("BMP loaded successfully\n\r");
+}

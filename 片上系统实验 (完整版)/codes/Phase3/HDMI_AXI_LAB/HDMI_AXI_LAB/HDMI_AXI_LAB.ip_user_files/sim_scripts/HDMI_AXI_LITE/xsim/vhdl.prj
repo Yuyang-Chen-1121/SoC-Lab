@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/HDMI_AXI_LITE/ip/HDMI_AXI_LITE_rst_ps7_0_100M_0/sim/HDMI_AXI_LITE_rst_ps7_0_100M_0.vhd" \
+"../../../bd/HDMI_AXI_LITE/ip/HDMI_AXI_LITE_axi_gpio_0_0/sim/HDMI_AXI_LITE_axi_gpio_0_0.vhd" \
+
+nosort

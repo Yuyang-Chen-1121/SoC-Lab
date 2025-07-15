@@ -1,0 +1,7 @@
+Running: xsim.dir/HDMI_AXI_LITE_wrapper_behav/xsimk.exe -simmode gui -wdb HDMI_AXI_LITE_wrapper_behav.wdb -simrunnum 0 -socket 65104
+Design successfully loaded
+Design Loading Memory Usage: 28868 KB (Peak: 28868 KB)
+Design Loading CPU Usage: 61 ms
+Simulation completed
+Simulation Memory Usage: 110052 KB (Peak: 110052 KB)
+Simulation CPU Usage: 144874 ms

@@ -1,0 +1,272 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* XILINX CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "sccb_219.h"
+
+
+// success: 1
+// fail: 0
+int ov5647_i2c_read(u16 regID, u8 *regDat)
+{
+    startSCCB();
+    //usleep(10);
+    if(0==SCCBwriteByte(0x20))
+    {
+        stopSCCB();
+        return(0);
+    }
+    //usleep(10);
+    if(0==SCCBwriteWord(regID))
+    {
+        stopSCCB();
+        return(0);
+    }
+    stopSCCB();
+    
+    //usleep(10);
+    //write address first, then read
+    startSCCB();
+    //usleep(10);
+    if(0==SCCBwriteByte(0x21))
+    {
+        stopSCCB();
+        return(0);
+    }
+    //usleep(10);
+    *regDat=SCCBreadByte();
+    noAck();
+    stopSCCB();
+    return(1);
+}
+
+// success: 1
+// fail: 0
+
+int ov5647_i2c_write(u16 regID, u8 regDat)
+{
+    startSCCB();
+    if(0==SCCBwriteByte(0x20))
+    {
+        stopSCCB();
+        return(0);
+    }
+    //usleep(10);
+    if(0==SCCBwriteWord(regID))
+    {
+        stopSCCB();
+        return(0);
+    }
+    //usleep(10);
+    if(0==SCCBwriteByte(regDat))
+    {
+        stopSCCB();
+        return(0);
+    }
+    stopSCCB();
+
+    return(1);
+}
+
+// chip id: 0x5647
+int ov5647_get_para_chip_id(int *val)
+{
+    int retval = 0;
+    u8 idh, idl;
+
+    *val = 0;
+    retval |= ov5647_i2c_read(0x0000, &idh);
+    retval |= ov5647_i2c_read(0x0001, &idl);
+
+    if (retval < 0) {
+        xil_printf("%s: failed.\r\n", __func__);
+        return -1;
+    } else {
+        *val = (idh << 8) | idl;
+        xil_printf("%s: chip id is 0x%04x\r\n", __func__, *val);
+    }
+
+    return 0;
+}
+
+int ov5647_reset(void)
+{
+    PWDN_HIGH;
+    usleep(40000);
+    PWDN_LOW;
+    usleep(40000);
+    PWDN_HIGH;
+    usleep(40000);
+    return 1;
+}
+
+int ov5647_done(void)
+{
+    FLASH_HIGH;
+    sleep(2);
+    FLASH_LOW;
+    return 1;
+}
+
+
+
+int main()
+{
+	int Status;
+	int ov_id = 0;
+
+    init_platform();
+
+    Status = XGpio_Initialize(&IIC, XPAR_AXI_GPIO_0_DEVICE_ID);
+    if (Status != XST_SUCCESS)
+    {
+    	return XST_FAILURE;
+    }
+
+    Status = XGpio_Initialize(&CONTRL, XPAR_AXI_GPIO_1_DEVICE_ID);
+    if (Status != XST_SUCCESS)
+    {
+    	return XST_FAILURE;
+    }
+
+    SCL_OUT;
+    SDA_OUT;
+    PWDN_OUT;
+    FLASH_OUT;
+
+    print("Start.\r\n");
+    ov5647_reset();
+    ov5647_get_para_chip_id(&ov_id);
+    ov5647_done();
+    print("Done.\r\n");
+     init_ov5647();
+
+    return 0;
+}
+
+void init_ov5647()
+{
+	unsigned short reg_addr_data[][2]=
+	{
+		{0x103,0x1},   //software reset
+		{0x100,0x0},   //SW standby
+//		{0x6620,0x1},  //unknown
+//		{0x6621,0x1},
+//		{0x6622,0x1},
+//		{0x6623,0x1},
+		{0x30eb,0x5},//To access this address area[0x3000-0x5FFF]
+		{0x30eb,0xc},
+		{0x300a,0xff},
+		{0x300b,0xff},
+		{0x30eb,0x5},
+		{0x30eb,0x9},
+		{0x114,0x1}, // CSI_LANE_MODE 1:two line 3:four line
+		{0x128,0x0}, //MIPI Global timing setting  0: auto mode, 1: manual mode
+		{0x12a,0x18}, //INCK frequency [MHz] [15:8]
+		{0x12b,0x0},  //[7:0]
+		{0x164,0x2}, //x_start
+		{0x165,0xa8},
+		{0x166,0xa}, //x_end
+		{0x167,0x27},
+		{0x168,0x2},  //y_start
+		{0x169,0xb4},
+		{0x16a,0x6},  //y_end
+		{0x16b,0xee},
+		{0x16c,0x7},  //x_output_size[
+		{0x16d,0x80},
+		{0x16e,0x4},  //y_output_size[
+		{0x16f,0x3b},
+		{0x170,0x1},
+		{0x171,0x1},
+		{0x174,0x0},
+		{0x175,0x0},
+		{0x18c,0x8},  //raw8
+		{0x18d,0x8},
+		{0x301,0x4},  //about clk
+		{0x303,0x1},
+		{0x304,0x3},
+		{0x305,0x3},
+		{0x306,0x0},
+		{0x307,0x28},
+		{0x309,0x8},
+		{0x30b,0x1},
+		{0x30c,0x0},
+		{0x30d,0x50},//72
+//		{0x455e,0x0},  //unknown
+//		{0x471e,0x4b},
+//		{0x4767,0xf},
+//		{0x4750,0x14},
+//		{0x4540,0x0},
+//		{0x47b4,0x14},
+//		{0x4713,0x30},
+//		{0x478b,0x10},
+//		{0x478f,0x10},
+//		{0x4793,0x10},
+//		{0x4797,0xe},
+//		{0x479b,0xe},
+		{0x172,0x3},   //image_orientation (for both direction)
+				//bit[0]: hori. direction bit[1]: vert.direction
+
+		{0x157,0xc0},  //analogue_gain_code_global
+		{0x15a,0x5},   //coarse_integration_time
+		{0x15b,0x22},
+		{0x160,0x5},   //frame_length_lines
+		{0x161,0xe3},
+		{0x162,0xd},   //line_length_pck
+		{0x163,0x78},
+		{0x0100,0x01}
+	};
+	int i;
+	for(i=0; i<49; i++)
+	{
+		ov5647_i2c_write(reg_addr_data[i][0], reg_addr_data[i][1]);
+		usleep(1000);
+	}
+}
+
+

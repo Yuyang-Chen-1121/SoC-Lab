@@ -1,0 +1,153 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+/***************************** Include Files *********************************/
+
+#include "sleep.h"
+#include "xtime_l.h"
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xpseudo_asm.h"
+#include "xreg_cortexa9.h"
+#include "airbus.h"
+
+#if defined (SLEEP_TIMER_BASEADDR)
+#include "xil_sleeptimer.h"
+#endif
+
+/****************************  Constant Definitions  ************************/
+#if defined (SLEEP_TIMER_BASEADDR)
+#define COUNTS_PER_USECOND (SLEEP_TIMER_FREQUENCY / 1000000)
+#else
+/**< Global Timer is always clocked at half of the CPU frequency */
+#define COUNTS_PER_USECOND  (XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ / (2U*1000000U))
+#endif
+
+
+unsigned int *HDMI_AXI_LITE_BASEADDR = (unsigned int *)0x43C00000;
+unsigned int *LED_BASEADDR = (unsigned int *)0x41200000;
+#define WEB_OFF 0x00//0x00 0
+#define TOGGLE_OFF 0x01 //0x01 0
+#define DATA_OFF 0x02//0x02 23:0
+#define ADDR_OFF 0x03//0x03 15:0
+
+
+
+
+
+
+
+int usleep_A9(unsigned long useconds)
+{
+#if defined (SLEEP_TIMER_BASEADDR)
+	Xil_SleepTTCCommon(useconds, COUNTS_PER_USECOND);
+#else
+	XTime tEnd, tCur;
+
+	XTime_GetTime(&tCur);
+	tEnd = tCur + (((XTime) useconds) * COUNTS_PER_USECOND);
+	do
+	{
+		XTime_GetTime(&tCur);
+	} while (tCur < tEnd);
+#endif
+
+	return 0;
+}
+
+
+int ptr = 0x0000;
+int ptr_cp = 0x0000;
+int led=0;
+int toggle =1;
+int data=0x008000;
+int main()
+{
+    init_platform();
+
+
+    while(1){
+    		LED_BASEADDR[0]=~led;
+    		HDMI_AXI_LITE_BASEADDR[WEB_OFF]=1;
+    	    HDMI_AXI_LITE_BASEADDR[TOGGLE_OFF]=toggle;
+    		HDMI_AXI_LITE_BASEADDR[ADDR_OFF]= ptr;
+
+
+    		HDMI_AXI_LITE_BASEADDR[DATA_OFF]=airbus[ptr_cp];
+    		xil_printf("togle:%x\n",HDMI_AXI_LITE_BASEADDR[TOGGLE_OFF]);
+    		xil_printf("addr:%d\n",HDMI_AXI_LITE_BASEADDR[ADDR_OFF]);
+    		xil_printf("data:%x\n",HDMI_AXI_LITE_BASEADDR[DATA_OFF]);
+
+    		ptr_cp++;
+    		usleep(50000);
+    		if (ptr==56000-1){
+    			ptr=0;
+    			sleep(3);
+    		}
+    		else ptr++;
+
+    		//usleep(100);
+    		//data+=10;
+    		toggle=~toggle;
+    		//led=~led;
+
+    }
+    //print("Hello World\n\r");
+
+   /* usleep(5000);
+    for (addr=0;addr<56000;addr++){
+    	HDMI_AXI_LITE_BASEADDR[PASS_OFF]=addr<<16 | data;
+    	data++;
+
+    	usleep(1000);
+    }*/
+    cleanup_platform();
+    return 0;
+}

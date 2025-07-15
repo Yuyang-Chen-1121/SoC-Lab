@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "ff.h"          // FatFs 主头文件
+#include "diskio.h"      // 磁盘接口头（确保项目中已有diskio.c）
+
+FATFS fatfs;
+FIL fil;
+
+void print_bmp_header(const BYTE *header)
+{
+    // BMP头部偏移及含义（简化版）
+    UINT width  = *(UINT *)(header + 18);
+    UINT height = *(UINT *)(header + 22);
+    UINT size   = *(UINT *)(header + 34);
+    u16 bit_depth = *(u16 *)(header + 28);
+
+
+    xil_printf("BMP Info:\n\r");
+    xil_printf(" Width: %u px\n\r", width);
+    xil_printf(" Height: %u px\n\r", height);
+    xil_printf(" Size: %u bytes\n\r", size);
+    xil_printf(" Bit depth: %u\n\r", bit_depth);
+}
+
+int main()
+{
+    FRESULT res;
+    UINT br;
+    BYTE bmp_header[54];
+
+    init_platform();
+    xil_printf("Zedboard BMP Reader with diskio.c SD init\n\r");
+
+    // 挂载文件系统，驱动初始化由diskio.c完成
+    res = f_mount(&fatfs,"",0);
+    if (res != FR_OK) {
+        xil_printf("Error: f_mount failed with code %d\n\r", res);
+        cleanup_platform();
+        return -1;
+    }
+    xil_printf("File system mounted successfully.\n\r");
+
+    // 打开BMP文件
+    res = f_open(&fil, "0:/airbus_1.bmp", FA_READ);
+    if (res != FR_OK) {
+        xil_printf("Error: Failed to open file airbus_1.bmp, code %d\n\r", res);
+        cleanup_platform();
+        return -1;
+    }
+
+    // 读取BMP文件头54字节
+    res = f_read(&fil, bmp_header, sizeof(bmp_header), &br);
+    if (res != FR_OK || br != sizeof(bmp_header)) {
+        xil_printf("Error: Failed to read BMP header, code %d, bytes read %u\n\r", res, br);
+        f_close(&fil);
+        cleanup_platform();
+        return -1;
+    }
+
+    // 验证BMP文件头
+    if (bmp_header[0] != 'B' || bmp_header[1] != 'M') {
+        xil_printf("Error: Invalid BMP file header.\n\r");
+        f_close(&fil);
+        cleanup_platform();
+        return -1;
+    }
+
+    // 打印BMP头信息
+    print_bmp_header(bmp_header);
+
+    f_close(&fil);
+    f_mount(NULL, "0:", 1); // 卸载文件系统
+
+    xil_printf("BMP file processed successfully.\n\r");
+    cleanup_platform();
+    return 0;
+}

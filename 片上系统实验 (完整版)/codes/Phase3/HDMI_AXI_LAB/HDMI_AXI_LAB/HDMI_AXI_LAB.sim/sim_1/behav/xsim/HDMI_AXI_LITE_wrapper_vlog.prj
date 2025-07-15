@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../HDMI_AXI_LAB.srcs/sources_1/bd/HDMI_AXI_LITE/ipshared/ec67/hdl" --include "../../../../HDMI_AXI_LAB.srcs/sources_1/bd/HDMI_AXI_LITE/ipshared/5bb9/hdl/verilog" --include "../../../../HDMI_AXI_LAB.srcs/sources_1/bd/HDMI_AXI_LITE/ipshared/70fd/hdl" --include "D:/Program/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ip/HDMI_AXI_LITE_HDMI_AXI_LITE_0_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ipshared/9290/hdl/HDMI_AXI_LITE_v1_0_S00_AXI.v" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ipshared/9290/src/clk_pll.v" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ipshared/9290/src/gen_pat.v" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ipshared/9290/src/i2c_sender.v" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ipshared/9290/src/zedboard_hdmi_1080p.v" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ipshared/9290/hdl/HDMI_AXI_LITE_v1_0.v" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ip/HDMI_AXI_LITE_HDMI_AXI_LITE_0_0/sim/HDMI_AXI_LITE_HDMI_AXI_LITE_0_0.v" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ip/HDMI_AXI_LITE_processing_system7_0_0/sim/HDMI_AXI_LITE_processing_system7_0_0.v" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/sim/HDMI_AXI_LITE.v" \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ip/HDMI_AXI_LITE_auto_pc_0/sim/HDMI_AXI_LITE_auto_pc_0.v" \
+"../../../../HDMI_AXI_LAB.srcs/sources_1/bd/HDMI_AXI_LITE/hdl/HDMI_AXI_LITE_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

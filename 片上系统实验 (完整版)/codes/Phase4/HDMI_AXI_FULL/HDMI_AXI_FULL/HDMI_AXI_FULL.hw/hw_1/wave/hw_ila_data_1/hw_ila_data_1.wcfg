@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="16384001fs"></ZoomEndTime>
+      <Cursor1Time time="4262000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="259"></NameColumnWidth>
+      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="28" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/hdmi_hsync" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/hdmi_hsync</obj_property>
+      <obj_property name="ObjectShortName">hdmi_hsync</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/hdmi_vsync" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/hdmi_vsync</obj_property>
+      <obj_property name="ObjectShortName">hdmi_vsync</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/h_counter" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/h_counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">h_counter[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/v_counter" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/v_counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_counter[11:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/axi_araddr" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/axi_araddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_araddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/dina" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/dina[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/reads_done" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/reads_done</obj_property>
+      <obj_property name="ObjectShortName">reads_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/txn_request" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/txn_request</obj_property>
+      <obj_property name="ObjectShortName">txn_request</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/init_txn_pulse" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/init_txn_pulse</obj_property>
+      <obj_property name="ObjectShortName">init_txn_pulse</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/M_AXI_ARREADY" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/M_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_ARREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/h_counter" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/h_counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">h_counter[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/v_counter" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/v_counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_counter[11:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/reads_done" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/reads_done</obj_property>
+      <obj_property name="ObjectShortName">reads_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/dina" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/dina[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/hdmi_d" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/hdmi_d[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hdmi_d[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/axi_araddr" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/axi_araddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_araddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_rdata" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_rdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_arready" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_arready</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arready</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_arvalid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arvalid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_rlast" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_rlast</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_rlast</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_rready" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_rready</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_rready</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/start_single_burst_read" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/start_single_burst_read</obj_property>
+      <obj_property name="ObjectShortName">start_single_burst_read</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/txn_request" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/txn_request</obj_property>
+      <obj_property name="ObjectShortName">txn_request</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/init_txn_pulse" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/init_txn_pulse</obj_property>
+      <obj_property name="ObjectShortName">init_txn_pulse</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/hdmi_de" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/hdmi_de</obj_property>
+      <obj_property name="ObjectShortName">hdmi_de</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/M_AXI_RVALID" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/M_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/wea" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/wea</obj_property>
+      <obj_property name="ObjectShortName">wea</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_rvalid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_rvalid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,33 @@
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: HDMI_AXI_LITE_SDK.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_AXI_LITE_SDK_bsp/ps7_cortexa9_0/lib -o "HDMI_AXI_LITE_SDK.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_AXI_LITE_SDK.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_AXI_LITE_SDK.elf  |tee "HDMI_AXI_LITE_SDK.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+9427788	   1160	   8248	9437196	 90000c	HDMI_AXI_LITE_SDK.elf
+'Finished building: HDMI_AXI_LITE_SDK.elf.size'
+' '
+21:55:54 **** Incremental Build of configuration Debug for project HDMI_AXI_LITE_SDK ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:55:56 **** Incremental Build of configuration Debug for project HDMI_AXI_LITE_SDK ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+12:23:54 **** Incremental Build of configuration Debug for project HDMI_AXI_LITE_SDK ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+12:55:53 **** Incremental Build of configuration Debug for project HDMI_AXI_LITE_SDK ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

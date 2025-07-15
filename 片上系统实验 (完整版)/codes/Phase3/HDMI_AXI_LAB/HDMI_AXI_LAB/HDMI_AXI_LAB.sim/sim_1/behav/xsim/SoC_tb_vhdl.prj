@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../HDMI_AXI_LAB.ip_user_files/bd/HDMI_AXI_LITE/ip/HDMI_AXI_LITE_rst_ps7_0_100M_0/sim/HDMI_AXI_LITE_rst_ps7_0_100M_0.vhd" \
+
+# Do not sort compile order
+nosort

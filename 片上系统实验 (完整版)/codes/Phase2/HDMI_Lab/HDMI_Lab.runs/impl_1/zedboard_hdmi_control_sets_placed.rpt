@@ -1,0 +1,75 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Jun 27 11:40:51 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file zedboard_hdmi_control_sets_placed.rpt
+| Design       : zedboard_hdmi
+| Device       : xc7z020
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |     8 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|    16+ |            9 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |            5 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             136 |           19 |
+| Yes          | No                    | No                     |              16 |            4 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              96 |           21 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+--------------------------------------+--------------------------------------+------------------+----------------+
+|     Clock Signal     |             Enable Signal            |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++----------------------+--------------------------------------+--------------------------------------+------------------+----------------+
+|  pll01/clkout_150_d0 | u_i2c_sender/i2c_sda1_out            | reset_IBUF                           |                1 |              2 |
+|  pll01/clkout_150_d0 |                                      |                                      |                5 |             16 |
+|  pll01/clkout_150_d0 | u_i2c_sender/cmd_counter[7]_i_1_n_0  | reset_IBUF                           |                3 |             16 |
+|  pll01/clkout_150_d0 | u_i2c_sender/i2c_cmd[19]_i_1_n_0     |                                      |                4 |             16 |
+|  pll01/clkout_150_d0 | u_i2c_sender/word_counter[7]_i_2_n_0 | u_i2c_sender/word_counter[7]_i_1_n_0 |                2 |             16 |
+|  pll01/clkout_150_d0 | u_i2c_sender/p_0_in_0                | reset_IBUF                           |                4 |             16 |
+|  pll01/clkout_150_d0 | u_i2c_sender/i2c_cmd[19]_i_1_n_0     | reset_IBUF                           |                4 |             22 |
+|  pll01/clkout_150_d0 | u_gen_pat/v_counter                  | reset_IBUF                           |                7 |             24 |
+|  pll01/clkout_150_d0 |                                      | u_gen_pat/addra[15]_i_1_n_0          |                5 |             32 |
+|  pll01/clkout_150_d0 |                                      | reset_IBUF                           |               14 |            104 |
++----------------------+--------------------------------------+--------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,16 @@
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.bss=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.data=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.data1=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.fixup=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.rodata=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.rodata1=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.sbss=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.sbss2=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.sdata=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.sdata2=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:.text=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:heap=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:heap-size=1024
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:stack=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.HDMI_AXI_LITE_SDK\:stack-size=1024
+eclipse.preferences.version=1

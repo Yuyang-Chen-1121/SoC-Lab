@@ -1,0 +1,717 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Jul  5 00:37:01 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Jul  5 00:11:43 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Jul  4 23:57:08 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Jul  4 23:20:02 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 11) to (Rev. 12)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'CLKA'
+
+-Upgrade has removed port 'CLKB'
+
+-Upgrade has added port 'LINE_END'
+
+-Upgrade has added port 'PCLK'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Jul  4 21:53:07 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_mipi_interface_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of OV_HDMI_mipi_interface_0_0 (xilinx.com:user:mipi_interface:1.0) from (Rev. 11) to (Rev. 12)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'OV_HDMI_mipi_interface_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'LINE_END'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Jul  4 21:52:54 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_mipi_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of OV_HDMI_mipi_interface_0_0 (xilinx.com:user:mipi_interface:1.0 (Rev. 11)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Jul  4 21:52:54 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_HDMI_AXI_FULL_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_HDMI_AXI_FULL_0_0 (xilinx.com:user:HDMI_AXI_FULL:2.0) from (Rev. 16) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Jul  3 21:47:52 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_color_bar_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_2_color_bar_master_0_0 (xilinx.com:user:color_bar_master:1.0 (Rev. 4)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Jul  3 21:26:10 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_color_bar_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_color_bar_master_0_0 (xilinx.com:user:color_bar_master:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Jul  3 21:17:10 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_color_bar_master_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_2_color_bar_master_0_0 (xilinx.com:user:color_bar_master:1.0) from (Rev. 1) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_2_color_bar_master_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'txn_request'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Jul  3 11:38:18 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_mipi_interface_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of OV_HDMI_mipi_interface_0_0 (xilinx.com:user:mipi_interface:1.0) from (Rev. 10) to (Rev. 11)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'OV_HDMI_mipi_interface_0_0'.
+
+
+-Upgrade has removed interface 'RESET'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'OV_HDMI_mipi_interface_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'CAM_DATA'
+
+-Upgrade has added port 'CAM_DATA_i'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  2 17:39:22 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_mipi_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_mipi_interface_0_0 (xilinx.com:user:mipi_interface:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  2 16:59:35 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_mipi_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_mipi_interface_0_0 (xilinx.com:user:mipi_interface:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  2 14:50:00 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  2 14:48:59 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0 (Rev. 10)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  2 12:02:34 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  2 11:13:39 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_mipi_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_mipi_interface_0_0 (xilinx.com:user:mipi_interface:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  2 11:13:39 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul  1 18:35:46 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul  1 15:48:00 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul  1 14:55:34 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul  1 14:41:01 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul  1 13:22:49 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'PCLK'
+
+-Upgrade has added port 'CLKA'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul  1 13:19:30 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of OV_HDMI_IMAGE_DATA_CONVERTER_0_0 (xilinx.com:user:IMAGE_DATA_CONVERTER:1.0) from (Rev. 1) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'OV_HDMI_IMAGE_DATA_CONVERTER_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'ADDRA'
+
+-Upgrade has added port 'CLKB'
+
+-Upgrade has added port 'DATA_IN'
+
+-Upgrade has added port 'HSYNC'
+
+-Upgrade has added port 'PCLK'
+
+-Upgrade has added port 'VSYNC'
+
+-Upgrade has added port 'txn_request'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul  1 11:23:37 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_mipi_interface_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of OV_HDMI_mipi_interface_0_0 (xilinx.com:user:mipi_interface:1.0) from (Rev. 6) to (Rev. 7)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'OV_HDMI_mipi_interface_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'LINE_END'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jun 30 21:51:26 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_mipi_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of OV_HDMI_mipi_interface_0_0 (xilinx.com:user:mipi_interface:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jun 30 21:42:19 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_mipi_interface_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of OV_HDMI_mipi_interface_0_0 (xilinx.com:user:mipi_interface:1.0) from (Rev. 3) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'OV_HDMI_mipi_interface_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'RESET_i'
+
+-Upgrade has added port 'RESET'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jun 30 20:33:56 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'OV_HDMI_mipi_interface_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of OV_HDMI_mipi_interface_0_0 (xilinx.com:user:mipi_interface:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'OV_HDMI_mipi_interface_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'RESET'
+
+-Upgrade has added port 'RESET_i'
+
+

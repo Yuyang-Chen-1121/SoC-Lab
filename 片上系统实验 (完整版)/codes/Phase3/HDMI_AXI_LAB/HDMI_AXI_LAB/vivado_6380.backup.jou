@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Jun 28 12:20:36 2025
+# Process ID: 6380
+# Current directory: D:/WorkSpace/Vivado/HDMI_AXI_LAB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18520 D:\WorkSpace\Vivado\HDMI_AXI_LAB\HDMI_AXI_LAB.xpr
+# Log file: D:/WorkSpace/Vivado/HDMI_AXI_LAB/vivado.log
+# Journal file: D:/WorkSpace/Vivado/HDMI_AXI_LAB\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/WorkSpace/Vivado/HDMI_AXI_LAB/HDMI_AXI_LAB.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/WorkSpace/Vivado/HDMI_AXI_LAB/HDMI_AXI_LAB.runs/impl_1/HDMI_AXI_LITE_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/WorkSpace/Vivado/HDMI_AXI_LAB/HDMI_AXI_LAB.runs/impl_1/HDMI_AXI_LITE_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+launch_sdk -workspace D:/WorkSpace/Vivado/HDMI_AXI_LAB/HDMI_AXI_LAB.sdk -hwspec D:/WorkSpace/Vivado/HDMI_AXI_LAB/HDMI_AXI_LAB.sdk/HDMI_AXI_LITE_wrapper.hdf
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/WorkSpace/Vivado/HDMI_AXI_LAB/HDMI_AXI_LAB.runs/impl_1/HDMI_AXI_LITE_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]

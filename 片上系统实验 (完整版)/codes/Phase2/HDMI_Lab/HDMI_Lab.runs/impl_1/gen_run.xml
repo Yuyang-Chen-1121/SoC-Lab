@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1750995583">
+  <File Type="BITSTR-BMM" Name="zedboard_hdmi_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="zedboard_hdmi_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="zedboard_hdmi_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="zedboard_hdmi_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="zedboard_hdmi.tcl"/>
+  <File Type="OPT-TIMING" Name="zedboard_hdmi_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="zedboard_hdmi_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="zedboard_hdmi_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="zedboard_hdmi_reports.tcl"/>
+  <File Type="OPT-DRC" Name="zedboard_hdmi_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="zedboard_hdmi.hwdef"/>
+  <File Type="PWROPT-DCP" Name="zedboard_hdmi_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="zedboard_hdmi_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="zedboard_hdmi_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="zedboard_hdmi_placed.dcp"/>
+  <File Type="PLACE-IO" Name="zedboard_hdmi_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="zedboard_hdmi_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="zedboard_hdmi_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="zedboard_hdmi_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="zedboard_hdmi_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="zedboard_hdmi_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="zedboard_hdmi_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="zedboard_hdmi.bgn"/>
+  <File Type="PLACE-TIMING" Name="zedboard_hdmi_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="zedboard_hdmi_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="zedboard_hdmi.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="zedboard_hdmi_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="zedboard_hdmi_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="zedboard_hdmi_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="zedboard_hdmi.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="zedboard_hdmi_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="zedboard_hdmi_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="zedboard_hdmi_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="zedboard_hdmi_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="zedboard_hdmi_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="zedboard_hdmi_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="zedboard_hdmi.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="zedboard_hdmi_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="zedboard_hdmi.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="zedboard_hdmi_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="zedboard_hdmi_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="zedboard_hdmi.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="zedboard_hdmi_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="zedboard_hdmi_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="zedboard_hdmi_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="zedboard_hdmi_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="zedboard_hdmi_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="zedboard_hdmi_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="zedboard_hdmi_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="zedboard_hdmi_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="zedboard_hdmi_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="zedboard_hdmi_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="zedboard_hdmi_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="zedboard_hdmi_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="zedboard_hdmi_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="zedboard_hdmi_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="zedboard_hdmi_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="zedboard_hdmi_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="zedboard_hdmi_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="zedboard_hdmi_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="zedboard_hdmi_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="zedboard_hdmi.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="zedboard_hdmi_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="zedboard_hdmi.rbt"/>
+  <File Type="BITSTR-NKY" Name="zedboard_hdmi.nky"/>
+  <File Type="BG-DRC" Name="zedboard_hdmi.drc"/>
+  <File Type="RDI-RDI" Name="zedboard_hdmi.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/clk_pll.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/gen_pat.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/i2c_sender.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/zedboard_hdmi_720p.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/yuv422.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="zedboard_hdmi"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/zedboard.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="pic_rom"/>
+</GenRun>

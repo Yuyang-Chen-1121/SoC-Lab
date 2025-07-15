@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Jul  5 16:20:45 2025
+# Process ID: 17824
+# Current directory: D:/WorkSpace/Vivado/OV_HDMI/OV_HDMI.runs/impl_1
+# Command line: vivado.exe -log OV_HDMI_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source OV_HDMI_wrapper.tcl -notrace
+# Log file: D:/WorkSpace/Vivado/OV_HDMI/OV_HDMI.runs/impl_1/OV_HDMI_wrapper.vdi
+# Journal file: D:/WorkSpace/Vivado/OV_HDMI/OV_HDMI.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source OV_HDMI_wrapper.tcl -notrace

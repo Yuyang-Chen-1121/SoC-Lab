@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="HDMI_AXI_FULL_HDMI_AXI_FULL_0_0_synth_1" LaunchDir="D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/HDMI_AXI_FULL_HDMI_AXI_FULL_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="HDMI_AXI_FULL_axi_smc_0_synth_1" LaunchDir="D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/HDMI_AXI_FULL_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="HDMI_AXI_FULL_HDMI_AXI_FULL_0_0_synth_1"/>
+		<Parent Id="HDMI_AXI_FULL_axi_smc_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="HDMI_AXI_FULL_HDMI_AXI_FULL_0_0_synth_1"/>
+		<Parent Id="HDMI_AXI_FULL_axi_smc_0_synth_1"/>
+	</Run>
+</Runs>
+

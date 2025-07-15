@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Jun 27 20:23:16 2025
+# Process ID: 32916
+# Current directory: d:/WorkSpace/Vivado/HDMI_AXI_LAB
+# Command line: wbtcv.exe -mode batch -source d:/workspace/vivado/hdmi_axi_lab/hdmi_axi_lab.tmp/hdmi_axi_lite_v1_0_project/HDMI_AXI_LITE_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: d:/WorkSpace/Vivado/HDMI_AXI_LAB/webtalk.log
+# Journal file: d:/WorkSpace/Vivado/HDMI_AXI_LAB\webtalk.jou
+#-----------------------------------------------------------
+source d:/workspace/vivado/hdmi_axi_lab/hdmi_axi_lab.tmp/hdmi_axi_lite_v1_0_project/HDMI_AXI_LITE_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace

@@ -1,0 +1,72 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Jul  5 16:22:03 2025
+| Host         : Chen running 64-bit major release  (build 9200)
+| Command      : report_drc -file OV_HDMI_wrapper_drc_opted.rpt -pb OV_HDMI_wrapper_drc_opted.pb -rpx OV_HDMI_wrapper_drc_opted.rpx
+| Design       : OV_HDMI_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 6
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| REQP-1840   | Warning  | RAMB18 async control check                                  | 4          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT OV_HDMI_i/mipi_interface_0/inst/HSYNC_inferred_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/line_select_reg {FDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT OV_HDMI_i/mipi_interface_0/inst/PCLK_inferred_i_1 is driving clock pin of 2 cells. This could lead to large hold time violations. First few involved cells are:
+    OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram {RAMB18E1}
+    OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram {RAMB18E1}
+
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram has an input control pin OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram/ENARDEN (net: OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/wea[0]) which is driven by a register (OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/line_select_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram has an input control pin OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram/WEA[0] (net: OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/wea[0]) which is driven by a register (OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/line_select_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram has an input control pin OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram/ENARDEN (net: OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/wea[0]) which is driven by a register (OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/line_select_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram has an input control pin OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram/WEA[0] (net: OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/bram_inst2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/wea[0]) which is driven by a register (OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/u_bram_ctrl/line_select_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+

@@ -1,0 +1,100 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Jul  5 17:37:03 2025
+# Process ID: 62252
+# Current directory: D:/WorkSpace/Vivado/HDMI_AXI_FULL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent62028 D:\WorkSpace\Vivado\HDMI_AXI_FULL\HDMI_AXI_FULL.xpr
+# Log file: D:/WorkSpace/Vivado/HDMI_AXI_FULL/vivado.log
+# Journal file: D:/WorkSpace/Vivado/HDMI_AXI_FULL\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/WorkSpace/Vivado/ip_repo/HDMI_AXI_FULL_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/WorkSpace/Vivado/ip_repo/whatever_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/WorkSpace/Vivado/ip_repo/HDMI_AXI_FULL_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Xilinx/Vivado/2018.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'HDMI_AXI_FULL.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+HDMI_AXI_FULL_HDMI_AXI_FULL_0_0
+
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 884.594 ; gain = 188.570
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248AC8AE6
+set_property PROGRAM.FILE {D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1/HDMI_AXI_FULL_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1/HDMI_AXI_FULL_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1/HDMI_AXI_FULL_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1/HDMI_AXI_FULL_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7z020_1 and the probes file(s) .
+The device design has 1 ILA core(s) and 0 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+launch_sdk -workspace D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.sdk -hwspec D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.sdk/HDMI_AXI_FULL_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.sdk -hwspec D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.sdk/HDMI_AXI_FULL_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+set_property PROBES.FILE {D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1/HDMI_AXI_FULL_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1/HDMI_AXI_FULL_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1/HDMI_AXI_FULL_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+WARNING: Simulation object HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/M_AXI_RVALID was not found in the design.
+WARNING: Simulation object HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/HDMI_AXI_FULL_v2_0_M00_AXI_inst/hdmi01/wea was not found in the design.
+WARNING: Simulation object HDMI_AXI_FULL_i/HDMI_AXI_FULL_0/inst/m00_axi_rvalid was not found in the design.
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248AC8AE6
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248AC8AE6
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210248AC8AE6.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+set_property PROBES.FILE {D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1/HDMI_AXI_FULL_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1/HDMI_AXI_FULL_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/WorkSpace/Vivado/HDMI_AXI_FULL/HDMI_AXI_FULL.runs/impl_1/HDMI_AXI_FULL_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+WARNING: [Xicom 50-38] xicom: No CseXsdb register file specified for CseXsdb slave type: 0, cse driver version: 0. Slave initialization skipped.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248AC8AE6
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jul  5 17:44:28 2025...

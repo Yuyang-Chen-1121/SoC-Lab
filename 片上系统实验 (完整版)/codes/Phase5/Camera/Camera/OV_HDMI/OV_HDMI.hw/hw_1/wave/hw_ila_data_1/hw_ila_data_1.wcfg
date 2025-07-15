@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/WorkSpace/Vivado/OV_HDMI/OV_HDMI.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="8192001fs"></ZoomEndTime>
+      <Cursor1Time time="7632000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="179"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/CAM_DATA_i" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/CAM_DATA_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CAM_DATA_i[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/addr_buffer" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/addr_buffer[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_buffer[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/addrb" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/addrb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/init_txn_pulse" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/IMAGE_DATA_CONVERTER_0/inst/IMAGE_DATA_CONVERTER_v1_0_M00_AXI_inst/init_txn_pulse</obj_property>
+      <obj_property name="ObjectShortName">init_txn_pulse</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/ADDRA" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/ADDRA[9:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDRA[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/buffer1" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/buffer1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/buffer2" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/buffer2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/data_head_count" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/data_head_count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">data_head_count[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/DATA_OUT" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/DATA_OUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_OUT[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/div_count" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/div_count[1:0]</obj_property>
+      <obj_property name="ObjectShortName">div_count[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/HSYNC" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/HSYNC</obj_property>
+      <obj_property name="ObjectShortName">HSYNC</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/nextstate" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/nextstate[5:0]</obj_property>
+      <obj_property name="ObjectShortName">nextstate[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/PCLK" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/PCLK</obj_property>
+      <obj_property name="ObjectShortName">PCLK</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="OV_HDMI_i/mipi_interface_0/inst/VSYNC" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">OV_HDMI_i/mipi_interface_0/inst/VSYNC</obj_property>
+      <obj_property name="ObjectShortName">VSYNC</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_LINE_END" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_LINE_END</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_LINE_END</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

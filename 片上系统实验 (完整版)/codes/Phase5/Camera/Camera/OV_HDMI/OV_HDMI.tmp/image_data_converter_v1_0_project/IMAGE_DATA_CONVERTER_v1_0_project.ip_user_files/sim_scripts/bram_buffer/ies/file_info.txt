@@ -1,0 +1,5 @@
+xpm_memory.sv,systemverilog,xil_defaultlib,../../../../../../../../../Program/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../../../../../Program/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd,
+blk_mem_gen_v8_4.v,verilog,blk_mem_gen_v8_4_1,../../../ipstatic/simulation/blk_mem_gen_v8_4.v,
+bram_buffer.v,verilog,xil_defaultlib,../../../../../../../ip_repo/IMAGE_DATA_CONVERTER_1.0/src/bram_buffer/sim/bram_buffer.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

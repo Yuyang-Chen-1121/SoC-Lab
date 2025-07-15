@@ -1,0 +1,4 @@
+NumberHits:8
+Timestamp: Sun Jun 29 12:16:30 UTC 2025
+VLNV: xilinx.com:ip:ila:6.2
+SynthRuntime: 172

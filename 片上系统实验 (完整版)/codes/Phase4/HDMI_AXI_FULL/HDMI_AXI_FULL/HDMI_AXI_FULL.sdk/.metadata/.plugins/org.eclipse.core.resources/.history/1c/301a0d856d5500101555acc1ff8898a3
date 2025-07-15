@@ -1,0 +1,249 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "ff.h"
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+/***************************** Include Files *********************************/
+
+#include "sleep.h"
+#include "xtime_l.h"
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xpseudo_asm.h"
+#include "xreg_cortexa9.h"
+#include "xparameters_ps.h"
+#include "xil_cache.h"
+#include "xil_mem.h"
+
+
+#if defined (SLEEP_TIMER_BASEADDR)
+#include "xil_sleeptimer.h"
+#endif
+
+/****************************  Constant Definitions  ************************/
+#if defined (SLEEP_TIMER_BASEADDR)
+#define COUNTS_PER_USECOND (SLEEP_TIMER_FREQUENCY / 1000000)
+#else
+/**< Global Timer is always clocked at half of the CPU frequency */
+#define COUNTS_PER_USECOND  (XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ / (2U*1000000U))
+#endif
+
+int usleep_A9(unsigned long useconds)
+{
+#if defined (SLEEP_TIMER_BASEADDR)
+	Xil_SleepTTCCommon(useconds, COUNTS_PER_USECOND);
+#else
+	XTime tEnd, tCur;
+
+	XTime_GetTime(&tCur);
+	tEnd = tCur + (((XTime) useconds) * COUNTS_PER_USECOND);
+	do
+	{
+		XTime_GetTime(&tCur);
+	} while (tCur < tEnd);
+#endif
+
+	return 0;
+}
+#define DDR_BASE_ADDR      0x00000000
+unsigned int const  FRAME_BUFFER_ADDR =  DDR_BASE_ADDR + 0x1000000 ;//帧缓存地址
+#define FF_FS_TINY            0     // 使用完整缓冲
+#define FF_FS_DEBUG           1     // 开启调试日志（或自定义打印）
+void load_sd_bmp();
+FATFS fs;
+int main()
+{
+    init_platform();
+
+    //print("Hello World\n\r");
+
+    load_sd_bmp();
+
+
+
+
+    cleanup_platform();
+    return 0;
+}
+
+
+void load_sd_bmp()
+{
+    FIL fil;
+    u8 bmp_head[54];
+    UINT br;
+    DIR dir;
+    FILINFO fno;
+    int toggle=0;
+    FRESULT res;
+    DSTATUS stat = disk_initialize(0);
+    xil_printf("disk_initialize(0) returned: %d\n\r", stat);
+
+    DSTATUS s = disk_status(0);
+    xil_printf("disk_status(0) returned: %d\n\r", s);
+
+    // Mount the file system and check return value
+    res = f_mount(&fs, "",0);
+    if (res != FR_OK) {
+        xil_printf("Error: Failed to mount file system, error code: %d\n\r", res);
+        return;
+    } else {
+        xil_printf("File system mounted successfully (path: '')\n\r");
+    }
+
+    // Try opening root directory (with logical drive number 0:/)
+    res = f_opendir(&dir, "0:/");
+    if (res == FR_OK) {
+        xil_printf("Root directory 0:/ opened successfully, scanning contents:\n\r");
+        while (f_readdir(&dir, &fno) == FR_OK && fno.fname[0]) {
+            xil_printf("file/folder: %s\n\r", fno.fname);
+        }
+        f_closedir(&dir);
+    } else {
+        xil_printf("Error: Unable to open root directory 0:/, error code: %d\n\r", res);
+    }
+
+    // Try opening BMP file
+    res = f_open(&fil, "0:/airbus_1.bmp", FA_READ);
+    if (res != FR_OK) {
+        xil_printf("Error: Failed to open airbus_1.bmp, error code: %d\n\r", res);
+        xil_printf("Trying to open 0:/airbus_1.bmp\n\r");
+        res = f_open(&fil, "0:/airbus_1.bmp", FA_READ);
+        if (res != FR_OK) {
+            xil_printf("Error: Failed to open 0:/airbus_1.bmp, error code: %d\n\r", res);
+        }
+    }
+
+    // Move file pointer to beginning
+    res = f_lseek(&fil, 0);
+    if (res != FR_OK) {
+        xil_printf("Error: Failed to seek to start of file, error code: %d\n\r", res);
+        f_close(&fil);
+        f_mount(NULL, "", 0);
+        return;
+    }
+
+    // Read BMP file header
+    res = f_read(&fil, bmp_head, 54, &br);
+    if (res != FR_OK || br != 54) {
+        xil_printf("Error: Failed to read BMP header, error code: %d, bytes read: %d\n\r", res, br);
+        f_close(&fil);
+        f_mount(NULL, "", 0);
+        return;
+    }
+
+    // Validate BMP file header
+    if (bmp_head[0] != 'B' || bmp_head[1] != 'M') {
+        xil_printf("Error: Invalid BMP file format\n\r");
+        f_close(&fil);
+        f_mount(NULL, "", 0);
+        return;
+    }
+
+    // Check bit depth (should be 32-bit)
+    u16 bit_depth = *(u16 *)(bmp_head + 0x1C);
+    if (bit_depth != 32) {
+        xil_printf("Error: BMP bit depth is %d, expected 32\n\r", bit_depth);
+        f_close(&fil);
+        f_mount(NULL, "", 0);
+        return;
+    }
+
+    // Extract width, height, and size
+    UINT bmp_width = *(UINT *)(bmp_head + 0x12);
+    UINT bmp_height = *(UINT *)(bmp_head + 0x16);
+    UINT bmp_size = *(UINT *)(bmp_head + 0x22);
+
+    // Validate dimensions
+    if (bmp_width == 0 || bmp_height == 0 || bmp_size == 0) {
+        xil_printf("Error: Invalid BMP dimensions or size (width=%d, height=%d, size=%d)\n\r",
+                   bmp_width, bmp_height, bmp_size);
+        f_close(&fil);
+        f_mount(NULL, "", 0);
+        return;
+    }
+
+    xil_printf("BMP Info: width=%d, height=%d, size=%d bytes, bit depth=%d\n\r",
+               bmp_width, bmp_height, bmp_size, bit_depth);
+    u32 BMP_DATA[5];
+
+    // Read image data into frame buffer
+    int buff=0;
+    for (int i = bmp_height - 1; i >= 0; i--) {
+        for(int j = bmp_width-1; j >= 0; j--){
+            res = f_read(&fil, BMP_DATA , 3, &br);
+            int Y0 = 0.257*BMP_DATA[0] + 0.504*BMP_DATA[1] + 0.098*BMP_DATA[2] + 16;
+            int U0 = -0.148*BMP_DATA[0] - 0.291*BMP_DATA[1] + 0.439*BMP_DATA[2] + 128;
+            int V0 = 0.439*BMP_DATA[0] - 0.386*BMP_DATA[1] - 0.071*BMP_DATA[2] + 128;
+            Y0 = Y0 < 0 ? 0 : (Y0 > 255 ? 255 : Y0);
+            U0 = U0 < 0 ? 0 : (U0 > 255 ? 255 : U0);
+            V0 = V0 < 0 ? 0 : (V0 > 255 ? 255 : V0);
+            if(!toggle){
+                buff = Y0 << 8 | U0;
+                xil_printf("%x\r\n", buff);
+            }
+            else {
+                buff = Y0 << 8 | V0;
+                xil_printf("%x\r\n", buff);
+            }
+        }
+    }
+
+    // Close file and unmount file system
+    f_close(&fil);
+    f_mount(NULL, "", 0);
+
+    // Flush cache
+    Xil_DCacheFlush();
+    xil_printf("BMP loaded successfully\n\r");
+}
+
